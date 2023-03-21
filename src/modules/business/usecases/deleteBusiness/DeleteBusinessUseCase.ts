@@ -1,5 +1,4 @@
 import { inject, injectable } from "tsyringe"
-import { CreateBusiness } from "../../dtos/ICreateBusinessDTO"
 import { IBusinessRepository } from "../../repositories/IBusinessRepository"
 
 @injectable()
@@ -9,8 +8,8 @@ class DeleteBusinessUseCase {
         private business: IBusinessRepository
     ) {}
 
-    async execute (id: string): Promise<CreateBusiness> {
-        return await this.business.deleteBusiness(id)
+    async execute (id: string): Promise<void> {
+        await this.business.deleteBusiness(id)
     }
 }
 

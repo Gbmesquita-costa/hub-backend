@@ -5,7 +5,7 @@ interface IBusinessRepository {
     getAllBusiness: (id: string) => Promise<CreateBusiness[]>
     findBusinessById: (id: string) => Promise<CreateBusiness>
     updateBusiness: ({ id, name, website, cnpj }: CreateBusiness) => Promise<CreateBusiness>
-    deleteBusiness: (id: string) => Promise<CreateBusiness>
+    deleteBusiness: (id: string) => Promise<void>
 }
 
 export { IBusinessRepository }

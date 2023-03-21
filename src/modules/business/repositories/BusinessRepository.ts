@@ -44,12 +44,16 @@ export class BusinessRepository implements IBusinessRepository {
         })
     }
 
-    async deleteBusiness(id: string): Promise<CreateBusiness> {
-        return await this.prisma.business.delete({ 
+    async deleteBusiness(id: string): Promise<void> {
+        await this.prisma.localBusiness.deleteMany({ 
+            where: { businessId: id } 
+        })
+        await this.prisma.business.delete({ 
             where: { id: id },
             include: {
                 LocalBusiness: true
             } 
         })
+
     }
 }
