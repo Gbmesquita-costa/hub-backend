@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules --respawn ./src/index.ts",
-    "vercel-build": "npx prisma migrate deploy"
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules --respawn ./src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",

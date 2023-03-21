@@ -21,13 +21,20 @@ A aplicação possui um sistema de autenticação usando JWT. Todas as rotas dos
 Para executar esta aplicação em seu computador, siga estas etapas:
 
 1. Clone este repositório
-2. Execute o comando npm install para instalar as dependências
+2. Execute o comando npm install ou yarn para instalar as dependências
 3. Crie um arquivo .env na raiz do projeto e configure as seguintes variáveis de ambiente:
 
 . `DATABASE_URL: a URL do banco de dados PostgreSQL`
 . `JWT: uma chave secreta usada para assinar e verificar tokens JWT`
 
-Execute o comando npm run dev ou yarn dev para iniciar o servidor de desenvolvimento
+Na variável `JWT`, recomendo criar um hash pelo site md5. Aqui está o link do site: https://www.md5hashgenerator.com/
+Após gerar o hash, copie e cole em sua variável de ambiente `JWT`
+
+Na variável `DATABASE_URL`, terá a seguinte estrutura: "postgresql://user:password@localhost:5432/database?schema=public"
+
+Como mostrado no exemplo acima, o DATABASE_URL terá 3 campos que devem ser preenchidos. O campo user, que deve ser preecnhido com o seu nome de usuário no banco de dados, o campo password, que deverá conter a senha do seu banco de dados, e o campo database, informando o database do seu banco.
+
+Após tudo configurado, execute o comando yarn(npm) prisma generate, depois o comando yarn(npm) prisma migrate dev, para gerar as migrations de suas tabelas no banco de dados. Depois, execute o comando yarn(npm) dev para iniciar o servidor de desenvolvimento
 
 Obs: Observe que há um arquivo .env.example que mostra o formato do arquivo .env.
 
