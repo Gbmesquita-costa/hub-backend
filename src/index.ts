@@ -10,14 +10,13 @@ import "./shared/index"
 import { routes } from "./routes/routes"
 
 const app = express()
-const port = process.env.PORT ?? 3333
-
-app.use(cors())
+const port = process.env.PORT || 3333
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.text())
 
+app.use(cors())
 app.use(routes)
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
