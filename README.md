@@ -4,6 +4,8 @@ Esta é uma aplicação backend construída com Node.js e Prisma. Ela consiste e
 
 A aplicação possui um sistema de autenticação usando JWT. Todas as rotas dos controllers são validadas com JWT e o token é retornado ao usuário após o login para ser armazenado e usado em futuras requisições.
 
+Link do backend em produção: https://hub-backend-eight.vercel.app/
+
 ## Tecnologias utilizadas
 
 . Node.js
