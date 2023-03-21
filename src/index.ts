@@ -10,10 +10,10 @@ import "./shared/index"
 import { routes } from "./routes/routes"
 
 const app = express()
-const port = 3333
+const port = process.env.PORT ?? 3333
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://hub-frontend-xi.vercel.app",
     credentials: true,
 }))
 
