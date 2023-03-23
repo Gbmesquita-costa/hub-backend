@@ -4,11 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules --respawn ./src/index.ts",
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
-    "pm2": "pm2 start ./dist/index.js",
-    "kill": "pm2 kill"
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules --respawn ./src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",

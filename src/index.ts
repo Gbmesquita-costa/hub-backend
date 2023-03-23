@@ -10,7 +10,7 @@ import "./shared/index"
 import { routes } from "./routes/routes"
 
 const app = express()
-const port = process.env.PORT || 3333
+const port = 8080
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
