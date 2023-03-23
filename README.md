@@ -40,7 +40,7 @@ Obs: Observe que há um arquivo .env.example que mostra o formato do arquivo .en
 
 ## Funcionalidades
 
-Link da aplicação em produção: https://hub-frontend-drab.vercel.app/
+Link da aplicação em produção: https://front-hub.vercel.app/
 
 . Cadastro de usuário: permite cadastrar um novo usuário no banco de dados PostgreSQL utilizando o ORM Prisma. A senha é criptografada utilizando a biblioteca Bcrypt para garantir a segurança das informações.
 
